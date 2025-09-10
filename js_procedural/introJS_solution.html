@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+<script>
+//console.log()
+console.log("Hello, Computer Science!");
+
+//variable type String
+var lastname="Christoffel";
+let firstname="Eric";
+let fullname=lastname+' '+firstname;
+
+console.log("Fullname : "+fullname);
+
+//array
+let notes=[14,18,15];
+
+console.log(notes);
+console.log(notes[1]);
+
+//sort()
+notes.sort();
+console.log(notes);
+
+//push()
+notes.push(18);
+console.log(notes);
+
+
+//opérateurs +,-,*,/,%
+const _VAT_RATE=0.2;
+let amountExcludingVAT=100;
+let vat=amountExcludingVAT*_VAT_RATE;
+console.log("Amount excluding VAT = "+amountExcludingVAT+" , VAT = "+vat+" , Amount including VAT = "+(amountExcludingVAT+vat));
+
+//modulo % : remainder of division
+console.log("The rest of dividing 5 by 2 is "+(5%2));
+
+
+//loop for
+var n=10;
+var sum=0;
+let product=1;
+
+for(let i=1;i<=n;i++){
+//sum=sum+i;
+sum+=i;
+product=product*i;
+}
+
+console.log("Sum = "+sum);
+console.log("Product = "+product);
+
+//console.log("i déclaré dans la boucle avec let => "+i);//not defined => let has a local scope in a loop, a block ERROR
+
+/*
+try {
+
+
+} catch (error) {
+//object properties : error.name , error.message
+console.error();
+console.log(error);
+}
+*/
+
+try {
+console.log("i declared within a for loop = "+i);//not defined => let is block scoped
+} catch (error) {
+console.error("i is not defined, no fatal error, the script is still running!");
+console.log(error);
+console.error(error.name+' : '+error.message);
+console.log(error.name+' : '+error.message);
+}
+
+
+//exercices : 2-dimensional array showing the complete multiplication table from 1 to 10
+
+//if conditional testing if
+amountExcludingVAT=1100;
+let discountRate;
+
+
+if(amountExcludingVAT>=2000) {
+discountRate=0.1;
+} else if(amountExcludingVAT>=1000 ){//&& amountExcludingVAT<2000
+discountRate=0.05;
+} else {
+discountRate=0;
+}
+
+var discount=amountExcludingVAT*discountRate;
+var amountDiscounted=amountExcludingVAT-discount;
+console.log("Amount excluding VAT = "+amountExcludingVAT+", discount rate = "+discountRate+' , discount = '+discount+', amount discounted = '+amountDiscounted);
+
+
+//user defined function
+amountExcludingVAT=1000;
+var quantity=2;
+let VAT=vatCalculation(quantity);
+
+console.log(`VAT ${VAT}`);//using template literals
+//console.log("vatValue "+vatValue);
+
+function vatCalculation(qty){
+var vatValue=amountExcludingVAT*qty*_VAT_RATE;
+return vatValue;
+}
+//Hoisting is JavaScript's default behavior of moving all declarations to the top of the current scope
+//the interpreter appears to move the declaration of functions, variables, classes, or imports to the top of their scope, prior to execution of the code.
+
+
+
+console.log("amount * quantity = "+(amountExcludingVAT*quantity)+",\n VAT = "+VAT);
+try {
+console.log("vatValue declared in teh fct with var : "+vatValue);//vatValue declarée dans la fct avec var a une portée locale à la fct, local scope
+} catch (error) {
+console.error("vatValue declared in the function with var is not defined, no fatal error! The script runs");
+console.log(error);
+}
+
+</script>
+</head>
+<body>
+	
+</body>
+</html>
