@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+<script>
+//create the JSON structure from https://jsoneditoronline.org/
+
+var contact={"lastname":"Christoffel","firstname":"Eric","emails":
+[{"email":"christof@unistra.fr","type":"pro"},
+{"email":"christof@gmail.com","type":"private"}]};
+
+console.log("JSON format")
+console.log(contact);
+
+console.log("Reading JSON propeties");
+console.log(contact.lastname);
+console.log(contact['lastname']);
+let property='firstname';
+console.log(contact[property]);
+console.log(contact.emails[0].email);
+console.log(contact.emails[0].email);
+
+let contact2String=JSON.stringify(contact);
+console.log("JSON as a string");
+console.log(contact2String);
+
+let contactString2JSON=JSON.parse(contact2String);
+console.log("JSON as a string 2 JSON");
+console.log(contactString2JSON);
+
+/*
+https://www.json.org/json-en.html
+{
+  "nom": "Christoffel",
+  "prenom": "Eric",
+  "emails": [
+    {
+      "email": "christof@unistra.fr",
+      "type": "pro"
+    },
+    {
+      "email": "christof@gmail.com",
+      "type": "perso"
+    }
+  ]
+}
+*/
+
+</script>
+
+</head>
+<body>
+	
+</body>
+</html>
