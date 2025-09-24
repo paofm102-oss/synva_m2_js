@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Etape 1-JSON</title>
+  <script>
+ let categories = [
+      {"idtache": 1, "categorie": "maison"},
+      {"idtache": 2, "categorie": "Université"},
+      {"idtache": 3, "categorie": "travail"}
+    ];
+    console.log(categories);
+
+    let priorites = [
+      {"idPriorite": 1, "priorite": "urgent"},
+      {"idPriorite": 2, "priorite": "pas urgent"}
+    ];
+    console.log(priorites);
+
+    let listetaches = [
+      {"idstatut": 1, "statut": "en attente"},
+      {"idstatut": 2, "statut": "en cours"},
+      {"idstatut": 3, "statut": "terminée"}
+    ];
+    console.log(listetaches);
+  </script>
+</head>
+<body>
